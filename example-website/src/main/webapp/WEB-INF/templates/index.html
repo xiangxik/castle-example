@@ -1,0 +1,72 @@
+<!doctype html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="keywords" th:content="#{seo.index.keywords}">
+<meta name="description" th:content="#{seo.index.description}">
+<meta name="author" content="xiangxik">
+<link rel="shortcut icon" th:href="@{/assets/favicon.ico}" href="/favicon.ico" />
+<link rel="bookmark" th:href="@{/assets/favicon.ico}" href="/favicon.ico" type="image/x-icon" />
+
+<title th:text="#{seo.index.title}">首页</title>
+
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" th:href="@{/assets/css/cover.css}">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+  <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+	<div class="site-wrapper">
+		<div class="site-wrapper-inner">
+			<div class="cover-container">
+				<div class="masthead clearfix">
+					<div class="inner">
+						<h3 class="masthead-brand">Example</h3>
+						<nav>
+							<ul class="nav masthead-nav">
+								<li class="active"><a href="#">Home</a></li>
+								<li><a href="#">Features</a></li>
+								<li><a href="#">Contact</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+
+				<div class="inner cover">
+					<h1 class="cover-heading">example of castle-platform</h1>
+					<p class="lead" th:text="'The admin\'s name is '+${admin.name}"></p>
+					<p class="lead">
+						<a href="https://github.com/xiangxik/castle-platform" class="btn btn-lg btn-default">Fork Me</a>
+					</p>
+				</div>
+
+				<div class="mastfoot">
+					<div class="inner">
+						<p>
+							Castle example for <a href="http://whenling.com">Whenling</a>, by <a href="http://ken.whenling.com">@ken</a>.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<!-- jQuery 2.2.0 -->
+	<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+	<!-- Bootstrap 3.3.6 -->
+	<script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>
