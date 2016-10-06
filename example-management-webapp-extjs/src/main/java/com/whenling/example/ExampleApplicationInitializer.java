@@ -77,6 +77,10 @@ public class ExampleApplicationInitializer extends ApplicationInitializer {
 		}
 
 		if (!tools.existMenu()) {
+
+			tools.setting("example", "/assets/images/logo_header.png", "/extjs/app/images/login_header.jpg", "020-85655521", "18023458612", "ken@whenling.com",
+					"广东省，广州市，天河区 天河路351号广东外经贸大厦22层2223");
+
 			int sortNo = 0;
 
 			MenuEntity productManagement = tools.createMenuByParent("产品管理", "product_management", "fa fa-cubes", null, null, sortNo++, null);
@@ -89,24 +93,18 @@ public class ExampleApplicationInitializer extends ApplicationInitializer {
 			tools.createMenuByParent("文章列表", "article", "fa fa-file", "app.view.article.ArticleList", null, sortNo++, cms);
 			tools.createMenuByParent("文章分类", "article_category", "fa fa-filter", "app.view.articleCategory.ArticleCategoryList", null, sortNo++, cms);
 			tools.createMenuByParent("文章标签", "article_tag", "fa fa-bookmark", "app.view.articleTag.ArticleTagList", null, sortNo++, cms);
+
 			tools.createMenuByParent("招聘管理", "job", "fa fa-archive", "app.view.job.JobList", null, sortNo++, cms);
-			tools.createMenuByParent("下载管理", "download", "fa fa-download", "app.view.download.DownloadList", null, sortNo++, cms);
-			
-			MenuEntity systemManagement = tools.createMenuByParent("系统管理", "system_management", "fa fa-desktop", null, null, sortNo++, null);
-			tools.createMenuByParent("参数设置", "parameter_setting", "fa fa-cogs", "app.view.setting.SettingList", null, sortNo++, systemManagement);
-			tools.createMenuByParent("菜单管理", "menu_management", "fa fa-navicon", "app.view.menu.MenuList", null, sortNo++, systemManagement);
-			tools.createMenuByParent("区域管理", "area_management", "fa fa-map", "app.view.area.AreaList", null, sortNo++, systemManagement);
-			tools.createMenuByParent("字典管理", "dict_management", "fa fa-book", "app.view.dict.DictList", null, sortNo++, systemManagement);
-			tools.createMenuByParent("系统日志", "system_log", "fa fa-building", "app.view.log.LogList", null, sortNo++, systemManagement);
 
 			MenuEntity userManagement = tools.createMenuByParent("用户管理", "user_management", "fa fa-users", null, null, sortNo++, null);
-			tools.createMenuByParent("会员列表", "member_list", "fa fa-user", "app.view.user.UserList", null, sortNo++, userManagement);
-			tools.createMenuByParent("组织机构列表 ", "org_list", "fa fa-object-group", "app.view.org.OrgList", null, sortNo++, userManagement);
+			tools.createMenuByParent("用户列表", "member_list", "fa fa-user", "app.view.user.UserList", null, sortNo++, userManagement);
 			tools.createMenuByParent("角色权限", "role_list", "fa fa-gavel", "app.view.role.RoleList", null, sortNo++, userManagement);
 
-			MenuEntity pluginManagement = tools.createMenuByParent("插件管理", "plugin_management", "fa fa-plug", null, null, sortNo++, null);
-			tools.createMenuByParent("oauth认证", "plugin_oauth", "fa fa-cogs", "app.view.plugin.OauthList", null, sortNo++, pluginManagement);
-			tools.createMenuByParent("支付方式", "plugin_payment", "fa fa-credit-card", "app.view.menu.MenuList", null, sortNo++, pluginManagement);
+			MenuEntity systemManagement = tools.createMenuByParent("系统管理", "system_management", "fa fa-desktop", null, null, sortNo++, null);
+			tools.createMenuByParent("参数设置", "parameter_setting", "fa fa-cogs", "app.view.setting.SettingForm", null, sortNo++, systemManagement);
+			tools.createMenuByParent("菜单管理", "menu_management", "fa fa-navicon", "app.view.menu.MenuList", null, sortNo++, systemManagement);
+			tools.createMenuByParent("留言反馈", "feedback_management", "fa fa-crosshairs", "app.view.feedback.FeedbackList", null, sortNo++, systemManagement);
+			tools.createMenuByParent("邮件订阅", "subscribe_management", "fa fa-envelope-o", "app.view.subscribe.SubscribeList", null, sortNo++, systemManagement);
 		}
 	}
 
