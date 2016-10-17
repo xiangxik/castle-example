@@ -7,16 +7,14 @@ import org.springframework.stereotype.Component;
 import com.whenling.castle.integration.ApplicationInitializer;
 import com.whenling.castle.main.entity.MenuEntity;
 import com.whenling.castle.main.entity.OrganizationEntity;
+import com.whenling.castle.main.entity.OrganizationEntity.OrgType;
 import com.whenling.castle.main.entity.RoleEntity;
 import com.whenling.castle.main.entity.UserEntity;
-import com.whenling.castle.main.entity.UserRoleEntity;
-import com.whenling.castle.main.entity.OrganizationEntity.OrgType;
 import com.whenling.castle.main.init.InitDataTools;
 import com.whenling.castle.main.security.PasswordService;
 import com.whenling.castle.main.service.OrganizationEntityService;
 import com.whenling.castle.main.service.RoleEntityService;
 import com.whenling.castle.main.service.UserEntityService;
-import com.whenling.castle.main.service.UserRoleEntityService;
 
 @Component
 public class ExampleApplicationInitializer extends ApplicationInitializer {
@@ -32,9 +30,6 @@ public class ExampleApplicationInitializer extends ApplicationInitializer {
 
 	@Autowired
 	private RoleEntityService roleEntityService;
-
-	@Autowired
-	private UserRoleEntityService userRoleEntityService;
 
 	@Autowired
 	private InitDataTools tools;
@@ -64,15 +59,11 @@ public class ExampleApplicationInitializer extends ApplicationInitializer {
 			admin.setEmail("ken@whenling.com");
 			admin.setName("孔祥溪");
 			admin.setOrg(org);
+			admin.getRoles().add(role);
 			userEntityService.save(admin);
 
 			org.setPrimaryLeader(admin);
 			organizationEntityService.save(org);
-
-			UserRoleEntity userRole = userRoleEntityService.newEntity();
-			userRole.setRole(role);
-			userRole.setUser(admin);
-			userRoleEntityService.save(userRole);
 
 		}
 
