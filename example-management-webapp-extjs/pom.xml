@@ -35,6 +35,12 @@
 			<artifactId>castle-plugin-webapp-extjs-oauth</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>com.whenling</groupId>
+			<artifactId>example-business</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 	</dependencies>
 
 	<build>

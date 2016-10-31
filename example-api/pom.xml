@@ -11,12 +11,8 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.whenling</groupId>
-			<artifactId>castle-repo</artifactId>
+			<artifactId>castle-main-api</artifactId>
 			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>javax.validation</groupId>
-			<artifactId>validation-api</artifactId>
 		</dependency>
 	</dependencies>
 </project>

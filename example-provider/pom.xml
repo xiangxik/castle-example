@@ -11,7 +11,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.whenling</groupId>
-			<artifactId>castle-integration-dubbo</artifactId>
+			<artifactId>castle-main-provider</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 
@@ -23,10 +23,10 @@
 		
 		<dependency>
 			<groupId>com.whenling</groupId>
-			<artifactId>castle-main-business</artifactId>
+			<artifactId>example-business</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-
+		
 		<dependency>
 			<groupId>org.mortbay.jetty</groupId>
 			<artifactId>jetty</artifactId>

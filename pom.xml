@@ -332,5 +332,6 @@
   	<module>example-api</module>
   	<module>example-provider</module>
   	<module>example-website</module>
+  	<module>example-business</module>
   </modules>
 </project>
