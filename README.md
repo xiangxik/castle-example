@@ -25,5 +25,5 @@ The example of castle-platform.
 当出现 Dubbo service server started! 表示启动成功。
 
 ### 6. 启动website
-使用jetty9.3.6+、或者tomcat8.5+ 的容器启动项目 example-management-webapp-extjs.
+使用jetty9.3.6+、或者tomcat8.5+ 的容器启动项目 example-website.
 ![Alt website](http://ken.whenling.com/img/castle/website.jpg)
