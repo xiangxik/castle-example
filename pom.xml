@@ -333,5 +333,6 @@
   	<module>example-provider</module>
   	<module>example-website</module>
   	<module>example-business</module>
+  	<module>example-management-webapp-bootstrap</module>
   </modules>
 </project>
